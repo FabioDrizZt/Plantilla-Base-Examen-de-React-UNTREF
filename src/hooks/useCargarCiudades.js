@@ -1,13 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 
 const useCargarCiudades = () => {
-  const [ciudades, setCiudades] = useState([]);
+  const [ciudades, setCiudades] = useState([])
 
   useEffect(() => {
-    // Simulamos la carga de un archivo local de JSON con `fetch`
-  }, []);
+    fetch('/datos.json')
+      .then(response => response.json())
+      .then(datos => { setCiudades(datos.ciudades) })
+  }, [])
 
-  return ciudades;  // Retornamos las ciudades cargadas
-};
+  return ciudades // Retornamos las ciudades cargadas
+}
 
-export default useCargarCiudades;
+export default useCargarCiudades
