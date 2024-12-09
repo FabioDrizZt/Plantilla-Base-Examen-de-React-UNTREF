@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const ClimaDetalle = ({ clima }) => {
   return (
@@ -18,7 +18,7 @@ const ClimaDetalle = ({ clima }) => {
         </tr>
       </tbody>
     </table>
-  );
-};
+  )
+}
 
-export default ClimaDetalle;
+export default ClimaDetalle
